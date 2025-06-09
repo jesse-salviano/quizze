@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultado - QuizzE</title>
+  <link rel="stylesheet" href="result.css" />
+</head>
+<body>
+  <div class="result-container">
+    <h2>Resultado do Quiz</h2>
+    <p id="score-text">Carregando resultado...</p>
+    <p id="feedback"></p>
+    <button onclick="window.location.href='quiz.html'">Tentar Novamente</button>
+    <a href="index.html" class="secondary-link">Voltar para Início</a>
+  </div>
+
+  <script>
+    function getParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const score = parseInt(urlParams.get('score')) || 0;
+      const total = parseInt(urlParams.get('total')) || 0;
+      return { score, total };
+    }
+
+    function showResult() {
+      const { score, total } = getParams();
+      const scoreText = document.getElementById("score-text");
+      const feedback = document.getElementById("feedback");
+
+      scoreText.textContent = `Você acertou ${score} de ${total} perguntas.`;
+
+      const percentage = (score / total) * 100;
+      let message = "";
+
+      if (percentage === 100) {
+        message = "Perfeito! Você gabaritou! 🏆";
+      } else if (percentage >= 80) {
+        message = "Excelente! Quase lá! 🎯";
+      } else if (percentage >= 50) {
+        message = "Bom esforço! Continue estudando. 💪";
+      } else {
+        message = "Vamos tentar de novo! Você consegue! 🔁";
+      }
+
+      feedback.textContent = message;
+    }
+
+    showResult();
+  </script>
+</body>
+</html>

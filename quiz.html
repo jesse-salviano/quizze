@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz - QuizzE</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <div class="quiz-card">
+    <header class="quiz-header">
+      <h1>🧠 Quizz<span class="highlight">E</span></h1>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress"></div>
+      </div>
+    </header>
+
+    <!-- Escolha de assunto -->
+    <section id="topic-select">
+      <h2>Escolha o assunto</h2>
+      <div class="topic-buttons">
+        <button onclick="startQuiz('aritmetica')">Aritmética</button>
+        <button onclick="startQuiz('algebra')">Álgebra</button>
+        <button onclick="startQuiz('geometria')">Geometria</button>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz-section" style="display: none;">
+      <p class="question" id="question">Carregando pergunta...</p>
+      <div class="answers">
+        <button class="answer-btn" onclick="selectOption(0)">A</button>
+        <button class="answer-btn" onclick="selectOption(1)">B</button>
+        <button class="answer-btn" onclick="selectOption(2)">C</button>
+        <button class="answer-btn" onclick="selectOption(3)">D</button>
+      </div>
+      <button class="next-btn" onclick="nextQuestion()">Próxima</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .ranking-container {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  h2 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+  }
+  
+  .ranking-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    text-align: left;
+  }
+  
+  .ranking-list li {
+    background-color: #334155;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .medal {
+    font-size: 1.2rem;
+  }
+  
+  .gold {
+    color: #facc15;
+  }
+  .silver {
+    color: #d1d5db;
+  }
+  .bronze {
+    color: #f97316;
+  }
+  
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #facc15;
+    color: #1e293b;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #eab308;
+  }
+  
