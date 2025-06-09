@@ -157,7 +157,7 @@ const questionsByTopic = {
         answer: 0
       }
     ]
-  };git 
+  };
   
   let questions = [];
   let currentQuestion = 0;
